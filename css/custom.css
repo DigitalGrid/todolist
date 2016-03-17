@@ -1,0 +1,34 @@
+h1 {
+  color: #444;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+#add {
+  max-width: 500px;
+  margin: 40px auto 40px auto;
+}
+
+#todo h4, #done h4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.item-name { 
+  display:inline-block;
+  margin:0px; 
+  font-size: 1.2em;
+}
+
+.item-buttons span {
+  cursor: pointer;
+  margin: 0 6px;
+}
+
+.list-group-item {
+  background-color: #fdfdfd; 
+}
+
+.blue {
+  color: #337AB7;
+}
