@@ -1,3 +1,4 @@
+//get elements
 var add = document.getElementById("add"),
     addInput = document.getElementById("add-input"),
     addButton = document.getElementById("add-button"),
@@ -19,11 +20,25 @@ if(localStorage.getItem("todoActivitiesStorage") !== null || localStorage.getIte
 }
 
 addButton.addEventListener("click", function() {
+  addE();
+});
+
+addInput.addEventListener("keypress", function(e) {
+  var key = e.which || e.keyCode;
+  if(key === 13) {
+    addE();
+  }
+});
+
+/*
+* add new activity
+*/
+function addE() {
   todoList.add(addInput.value);
   localStorage.setItem("todoActivitiesStorage", JSON.stringify(todoList.todoActivities)); //localStorage todo
   addInput.value = "";
   display("todoActivities");
-});
+}
 
 /*
 * display list
