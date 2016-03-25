@@ -59,7 +59,7 @@ function display(list) {
     itemName.className = "item-name";
     itemName.setAttribute("data-show-input", "false");
     itemName.id = list + i;
-    itemName.innerHTML = todoList[list][i];
+    itemName.innerText = todoList[list][i];
     
     var itemButtons = document.createElement("div");
     itemButtons.className = "pull-right item-buttons";
@@ -100,9 +100,9 @@ function editE(element) {
   
   if(itemName.getAttribute("data-show-input") == "false") {
     var input = document.createElement("input"),
-        temp = itemName.innerHTML;
+        temp = itemName.innerText;
     
-    itemName.innerHTML = "";
+    itemName.innerText = "";
     input.type = "text";
     input.className = "form-control";
     input.value = temp;
@@ -116,7 +116,7 @@ function editE(element) {
     
     if(todoList.edit(index, inputValue) !== false) {
       localStorage.setItem("todoActivitiesStorage", JSON.stringify(todoList.todoActivities)); //localStorage todo
-      itemName.innerHTML = inputValue;
+      itemName.innerText = inputValue;
       itemName.setAttribute("data-show-input", "false");
       element.classList.remove("class", "blue");
     }
