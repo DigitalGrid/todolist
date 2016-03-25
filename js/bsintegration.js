@@ -1,4 +1,4 @@
-//get elements
+//Get elements
 var add = document.getElementById("add"),
     addInput = document.getElementById("add-input"),
     addButton = document.getElementById("add-button"),
